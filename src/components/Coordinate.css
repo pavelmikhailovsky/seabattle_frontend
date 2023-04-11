@@ -1,0 +1,7 @@
+.coordinate-not-occupied {
+    background-color:white;
+}
+
+.coordinate-occupied {
+    background-color:black;
+}
