@@ -1,6 +1,6 @@
-import Coordinate from "./Coordinate";
-import { getOwnCoordinates } from "./api";
-import { BoardInfo, CoordinateInfo } from "./types";
+import Coordinate from "../coordinate/Coordinate";
+import { getOwnCoordinates } from "shared/api/api";
+import { BoardInfo, CoordinateInfo } from "shared/types";
 import "./Board.css";
 
 export default function Board(props: BoardInfo) {

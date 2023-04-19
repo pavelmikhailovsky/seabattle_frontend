@@ -1,4 +1,4 @@
-import Board from "./Board";
+import Board from "entities/board/Board";
 
 export default function Game() {
 

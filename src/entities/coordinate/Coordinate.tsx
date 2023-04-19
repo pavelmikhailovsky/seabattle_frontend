@@ -1,4 +1,4 @@
-import { CoordinateInfo } from "./types";
+import { CoordinateInfo } from "shared/types";
 import "./Coordinate.css";
 
 export default function Coordinate(props: CoordinateInfo) {
