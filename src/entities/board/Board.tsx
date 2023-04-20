@@ -26,7 +26,9 @@ export default function Board(props: BoardInfo) {
                             <tr>
                                 <th>{String.fromCharCode(letter)}</th>
                                 {coordinates.filter(c => c.content.charCodeAt(0) === letter)
-                                    .map(x => <Coordinate content={x.content} shipId={x.shipId} />)}
+                                    .map(x => <Coordinate content={x.content}
+                                                          shipId={x.shipId}
+                                                          isEnemyHit={x.isEnemyHit} />)}
                             </tr>
                     )}
 
@@ -58,14 +60,3 @@ export default function Board(props: BoardInfo) {
         </div>
     );
 }
-
-
-
-
-
-
-
-
-
-
-

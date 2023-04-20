@@ -1,7 +1,7 @@
 export type CoordinateInfo = {
     content: string;
     shipId: string;
-    isEnemyHit?: boolean = false;
+    isEnemyHit: boolean;
 };  
 
 export type BoardInfo = {

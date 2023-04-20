@@ -26,7 +26,13 @@ export function initialGameField(): Array<CoordinateInfo> {
             letter += 1;
         }
 
-        coordinates.push({content: String.fromCharCode(letter).concat(number.toString()), shipId: ""});
+        coordinates.push(
+            {
+                content: String.fromCharCode(letter).concat(number.toString()),
+                shipId: "",
+                isEnemyHit: false
+            }
+        );
 
         number++;
         count++;
@@ -51,6 +57,8 @@ function changeGameField(deckShips: Array<DeckShip>, gameField: Array<Coordinate
 
                 if (coordinateGameField) {
                     coordinateGameField.shipId = deckShip.id;
+                } else {
+                    console.log(`Coordinate ${coordinate.content} is undefined`);
                 }
             }
         }
@@ -62,7 +70,9 @@ function changeGameField(deckShips: Array<DeckShip>, gameField: Array<Coordinate
                 let coordinateGameField: CoordinateInfo | undefined = changedGameField.find((v) => v.content === coordinate.content);
 
                 if (coordinateGameField) {
-
+                    coordinateGameField.isEnemyHit = true;
+                } else {
+                    console.log(`Coordinate ${coordinate.content} is undefined`)
                 }
             }
         }

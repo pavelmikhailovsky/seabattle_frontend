@@ -3,11 +3,13 @@ import "./Coordinate.css";
 
 export default function Coordinate(props: CoordinateInfo) {
 
-    let clazzName = !props.shipId ? "coordinate-not-occupied" : "coordinate-occupied";
+    let clazzName: string = !props.shipId ? "coordinate-not-occupied" : "coordinate-occupied";
+
+    if (props.isEnemyHit) {
+        clazzName = "coordinate-occupied-enemy-hit"
+    }
 
     return (
-        <td className={clazzName}>
-
-        </td>
+        <td className={clazzName}></td>
     );
 }

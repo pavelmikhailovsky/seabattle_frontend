@@ -5,3 +5,7 @@
 .coordinate-occupied {
     background-color:black;
 }
+
+.coordinate-occupied-enemy-hit {
+    background-color: red;
+}
