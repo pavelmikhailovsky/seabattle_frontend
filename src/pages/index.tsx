@@ -1,9 +1,9 @@
-import Game from "pages/Game";
+import GamePage from "pages/GamePage";
 
 export const Routing = () => {
     return (
         <>
-            <Game />
+            <GamePage />
         </>
     );
 }
